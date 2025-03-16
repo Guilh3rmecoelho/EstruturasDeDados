@@ -4,12 +4,12 @@ As **estruturas de dados** desempenham um papel crucial no desenvolvimento de so
 
 ---
 
-## 🔹 **Estruturas de Dados Lineares vs. Não Lineares**  
+## 🔵 **Estruturas de Dados Lineares vs. Não Lineares**  
 
 ### ✔️ **Estruturas Lineares**  
 Os elementos são organizados **sequencialmente**, facilitando o acesso e manipulação de dados.  
 
-🔹 **Exemplos:**  
+🔵 **Exemplos:**  
 - **Listas (Arrays):** `lista = [1, 2, 3, 4]`  
 - **Filas (Queue):** `from collections import deque; fila = deque([1, 2, 3])`  
 - **Pilhas (Stack):** `pilha = [1, 2, 3]; pilha.append(4)`  
@@ -21,7 +21,7 @@ Os elementos são organizados **sequencialmente**, facilitando o acesso e manipu
 ### ✔️ **Estruturas Não Lineares**  
 Os elementos **não seguem uma sequência fixa** e podem ter múltiplas conexões.  
 
-🔹 **Exemplos:**  
+🔵 **Exemplos:**  
 - **Árvores (Trees):** `class No: def __init__(self, valor): self.valor = valor; self.esquerda = None`  
 - **Grafos (Graphs):** `grafo = {"A": ["B", "C"], "B": ["D"]}`  
 - **Tabelas Hash (Hash Tables):** `tabela = {"nome": "Ana", "idade": 25}`  
