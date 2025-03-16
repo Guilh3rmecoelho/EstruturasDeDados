@@ -177,6 +177,8 @@ Banco do Brasil🪙
   Google Maps, Waze 🛣️  
 - Uso de **grafos** para encontrar o caminho mais curto entre dois pontos.  
 - Aplicação de **estruturas hierárquicas** para armazenar mapas e rotas.
+---
+
 
   ### Referencias
  Link | Tipo | Descrição | Autor 
