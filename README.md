@@ -179,11 +179,9 @@ Banco do Brasil🪙
 - Aplicação de **estruturas hierárquicas** para armazenar mapas e rotas.
 
   ### Referencias
- Link | Tipo | Descrição 
-------|--------|--------------|
-https://www.datacamp.com/pt/tutorial/data-structures-python|Site|Tutorial de estruturas de dados Python
-[Tutorial]()|Repositório do GitHub|Um curso gratuito para ensinar Python para crianças
-[Curso em Vídeo - Python: Mundo 1](https://www.youtube.com/playlist?list=PLHz_AreHm4dlKP6QQCekuIPky1CiwmdI6)|Curso gratuito no Youtube|Um curso gratuito e introdutório de Python 1/3
-[Curso em Vídeo - Python: Mundo 2](https://www.youtube.com/playlist?list=PLHz_AreHm4dk_nZHmxxf_J0WRAqy5Czye)|Curso gratuito no Youtube|Um curso gratuito e introdutório de Python 2/3
-[Curso em Vídeo - Python: Mundo 3](https://www.youtube.com/watch?v=0LB3FSfjvao&list=PLHz_AreHm4dksnH2jVTIVNviIMBVYyFnH)|Curso gratuito no Youtube|Um curso gratuito e introdutório de Python 3/3
+ Link | Tipo | Descrição | Autor 
+------|--------|--------------| ------------|
+https://www.datacamp.com/pt/tutorial/data-structures-python|Artigo|Tutorial de estruturas de dados Python|Sejal Jaiswal
+https://www.geeksforgeeks.org/data-structures/|Blog|Tutorial de estruturas de dados| -
+https://www.hashtagtreinamentos.com/dicionarios-em-python|Blog|Dicionários em Python: Descubra o que são e como usá-los!|-
 
