@@ -11,3 +11,6 @@ for i in range(100000):
         pass
 fim = time.time()
 print(f"Tempo de execução com estrutura otimizada: {fim - inicio:.4f} segundos")
+
+# No segundo caso, usamos um conjunto (set), que utiliza uma tabela hash, permitindo buscas em tempo O(1).
+# Isso torna o segundo código muito mais eficiente para grandes volumes de dados.
