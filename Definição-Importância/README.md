@@ -145,24 +145,78 @@ o grafo (graph) é um conjunto de nós (ou vértices), ordenados ou não e ligad
 ### ✔️**Tabelas Hash (Hash Tables):** 
 A função hash é uma função que, a partir de uma entrada de dados, gera um valor numérico que identifica a posição de um elemento em uma tabela hash. Nós já vimos algumas outras estruturas de dados aqui nesse perfil, como buscar um elemento em uma lista encadeada ou em uma árvore binária, e vimos que a complexidade dessas operações é O(n) e O(log n), respectivamente. A tabela hash, por sua vez, consegue fazer essa busca em O(1), ou seja, em tempo constante. Isso significa que, não importa o tamanho da tabela, a busca será feita no mesmo tempo.
 
-📌 **Uso comum:** Sistemas de recomendação, algoritmos de busca, redes sociais.  
+**Exemplo de uso:**
+Um exemplo clássico de uso de tabela hash é a lista telefônica.
 
----
+Imagine que você quer encontrar o número de telefone de uma pessoa. Se a lista telefônica fosse uma lista encadeada, você teria que percorrer toda a lista até encontrar o nome da pessoa. Se fosse uma árvore binária, você teria que percorrer a árvore até encontrar o nome da pessoa. Mas, como a lista telefônica é uma tabela hash, você pode encontrar o número de telefone de uma pessoa em tempo constante, ou seja, em O(1). Vamos entender mais sobre isso. Ao adicionar um nome e um número de telefone à lista telefônica, a função hash é usada para gerar um índice para esse nome. Quando você quer encontrar o número de telefone de uma pessoa, a função hash é usada para gerar o índice correspondente ao nome da pessoa, e o número de telefone é retornado.
+```
+class TabelaHash:
+    def __init__(self, tamanho=100):
+        self.tamanho = tamanho
+        self.tabela = [None] * tamanho
+    
+    def hash_func(self, chave):
+        return sum(ord(char) for char in chave) % self.tamanho
+    
+    def inserir(self, nome, telefone):
+        indice = self.hash_func(nome)
+        if self.tabela[indice] is None:
+            self.tabela[indice] = []
+        self.tabela[indice].append((nome, telefone))
+        print(f"Contato {nome} adicionado com sucesso!")
+    
+    def buscar(self, nome):
+        indice = self.hash_func(nome)
+        if self.tabela[indice] is not None:
+            for contato in self.tabela[indice]:
+                if contato[0] == nome:
+                    return contato[1]
+        return "Contato não encontrado."
+    
+    def remover(self, nome):
+        indice = self.hash_func(nome)
+        if self.tabela[indice] is not None:
+            for i, contato in enumerate(self.tabela[indice]):
+                if contato[0] == nome:
+                    del self.tabela[indice][i]
+                    print(f"Contato {nome} removido com sucesso!")
+                    return
+        print("Contato não encontrado.")
+    
+    def exibir(self):
+        for i, lista in enumerate(self.tabela):
+            if lista:
+                print(f"Índice {i}: {lista}")
 
-## 🚀 **Impacto no Desempenho do Programa**  
+if __name__ == "__main__":
+    lista_telefonica = TabelaHash()
+    
+    while True:
+        print("\n1. Adicionar Contato")
+        print("2. Buscar Contato")
+        print("3. Remover Contato")
+        print("4. Exibir Lista Telefônica")
+        print("5. Sair")
+        
+        opcao = input("Escolha uma opção: ")
+        
+        if opcao == "1":
+            nome = input("Digite o nome: ")
+            telefone = input("Digite o telefone: ")
+            lista_telefonica.inserir(nome, telefone)
+        elif opcao == "2":
+            nome = input("Digite o nome a buscar: ")
+            print("Telefone:", lista_telefonica.buscar(nome))
+        elif opcao == "3":
+            nome = input("Digite o nome a remover: ")
+            lista_telefonica.remover(nome)
+        elif opcao == "4":
+            lista_telefonica.exibir()
+        elif opcao == "5":
+            break
+        else:
+            print("Opção inválida. Tente novamente.")
 
-Escolher a estrutura de dados errada pode impactar negativamente o desempenho do software.  
+```
 
-### **🔴 Código sem otimização (usando lista ao invés de dicionário):**
-```python
-# Buscando um item em uma lista (O(n) - Ineficiente para grandes volumes)
-usuarios = [("Ana", 25), ("Carlos", 30), ("Bruno", 40)]
-
-def buscar_idade(nome):
-    for usuario in usuarios:
-        if usuario[0] == nome:
-            return usuario[1]
-    return None
-
-print(buscar_idade("Carlos"))  # Saída: 30
 
