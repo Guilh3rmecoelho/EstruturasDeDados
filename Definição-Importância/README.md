@@ -138,9 +138,12 @@ Uma árvore é uma estrutura de dados recursiva que permite representar dados di
 
 
 ### ✔️ **Grafos (Graphs):** 
+o grafo (graph) é um conjunto de nós (ou vértices), ordenados ou não e ligados por arestas, formando uma estrutura em forma de rede. O grafo abaixo pode ser representado da seguinte forma:
 
+<img src="https://raw.githubusercontent.com/the-akira/PythonExperimentos/master/Algoritmos/Dijkstra/Imagens/Grafo.png" width="50%" alt="Texto Alternativo">
 
-- **Tabelas Hash (Hash Tables):** `tabela = {"nome": "Ana", "idade": 25}`  
+### ✔️**Tabelas Hash (Hash Tables):** 
+A função hash é uma função que, a partir de uma entrada de dados, gera um valor numérico que identifica a posição de um elemento em uma tabela hash. Nós já vimos algumas outras estruturas de dados aqui nesse perfil, como buscar um elemento em uma lista encadeada ou em uma árvore binária, e vimos que a complexidade dessas operações é O(n) e O(log n), respectivamente. A tabela hash, por sua vez, consegue fazer essa busca em O(1), ou seja, em tempo constante. Isso significa que, não importa o tamanho da tabela, a busca será feita no mesmo tempo.
 
 📌 **Uso comum:** Sistemas de recomendação, algoritmos de busca, redes sociais.  
 
