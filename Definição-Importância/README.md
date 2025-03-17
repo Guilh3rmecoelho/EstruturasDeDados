@@ -149,7 +149,7 @@ A função hash é uma função que, a partir de uma entrada de dados, gera um v
 Um exemplo clássico de uso de tabela hash é a lista telefônica.
 
 Imagine que você quer encontrar o número de telefone de uma pessoa. Se a lista telefônica fosse uma lista encadeada, você teria que percorrer toda a lista até encontrar o nome da pessoa. Se fosse uma árvore binária, você teria que percorrer a árvore até encontrar o nome da pessoa. Mas, como a lista telefônica é uma tabela hash, você pode encontrar o número de telefone de uma pessoa em tempo constante, ou seja, em O(1). Vamos entender mais sobre isso. Ao adicionar um nome e um número de telefone à lista telefônica, a função hash é usada para gerar um índice para esse nome. Quando você quer encontrar o número de telefone de uma pessoa, a função hash é usada para gerar o índice correspondente ao nome da pessoa, e o número de telefone é retornado.
-```
+``` python
 class TabelaHash:
     def __init__(self, tamanho=100):
         self.tamanho = tamanho
