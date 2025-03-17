@@ -15,39 +15,111 @@ Começaremos nosso estudo de estruturas de dados considerando quatro estruturas 
 ### ✔️ **Pilhas (Stacks)**  
  Uma pilha (stack) é uma coleção ordenada de itens onde a inserção de novos itens e a remoção de itens existentes sempre ocorrem na mesma extremidade. Este extremidade é comumente chamada de topo. A extremidade oposta ao topo é conhecida como base, seguem o princípio **LIFO** (*Last In, First Out*), onde o último elemento inserido é o primeiro a ser removido.  
 
-**Exemplo de uso:**  **Exemplo de uso:** Histórico de navegação em navegadores, desfazer/refazer em editores de texto.  
+**Exemplo de uso:**  **Exemplo de uso:** Histórico de navegação em navegadores
+```python
+# Criando uma pilha (usando lista)
+pilha = []
 
-<div align="center">
+# Adicionando elementos na pilha
+pilha.append(10)   # Adiciona no topo
+pilha.append(20)
+pilha.append(30)
 
+# Removendo elementos da pilha (remover do topo)
+topo = pilha.pop()  # Remove o último elemento
+print("Elemento removido do topo:", topo)
 
-(<img src= "https://assets-prod.sumo.prod.webservices.mozgcp.net/media/uploads/gallery/images/2021-07-12-03-10-14-83e595.png" width="30%" alt="Texto Alternativo">
+# Acessando o topo da pilha
+topo_pilha = pilha[-1]  # Acessa o último elemento sem remover
+print("Elemento no topo:", topo_pilha)
 
-</div>
-
+# Exibindo a pilha final
+print("Pilha final:", pilha)
+```
 
 ### ✔️ **Filas (Queues)**  
  Uma fila (queue) é uma coleção ordenada de itens em que a inserção de novos itens acontece em uma extremidade, chamado de “fim” (rear), e a remoção de itens existente ocorre no outro extremo, comumente chamado de “início” (front). Um elemento é inserido no fim da fila e faz o seu caminho em direção ao início, esperando até aquele momento em que é o próximo elemento seja removido. O item inserido mais recentemente na fila deve aguardar no final do coleção. O item que está na coleção há mais tempo está mais próximo do início. Este princípio de ordenação é às vezes chamado de FIFO, primeiro a entrar, primeiro a sair (first-in first-out). Também é conhecido como “primeiro a chegar, primeiro a ser servido” (first-come first-serverd).
 
- **Exemplo de uso:** Uma fila de supermercado, onde o primeiro a chegar será o primeiro a ser atendido.  
-<div align="center">
+ **Exemplo de uso:** **Exemplo de uso:** Sistemas de atendimento (suporte técnico, filas de impressão).
+``` python
+from collections import deque
 
-(<img src="https://img.freepik.com/vetores-gratis/pessoas-que-estao-na-fila-de-supermercado-longa-alinhando-a-ilustracao-de-composicao-plana-horizontal-do-servico-de-atendimento-ao-cliente_1284-29302.jpg" width="50%" alt="Texto Alternativo">
+# Criando uma fila (usando deque)
+fila = deque()
 
+# Adicionando elementos na fila
+fila.append(10)   # Adiciona no final da fila
+fila.append(20)
+fila.append(30)
 
+# Removendo elementos da fila (remoção do início)
+primeiro = fila.popleft()  # Remove o primeiro elemento da fila
+print("Elemento removido da frente:", primeiro)
 
-</div>
+# Acessando o primeiro e o último elemento
+frente = fila[0]   # Primeiro elemento
+ultimo = fila[-1]   # Último elemento
 
- 
+print("Primeiro elemento na fila:", frente)
+print("Último elemento na fila:", ultimo)
 
-
+# Exibindo a fila final
+print("Fila final:", fila)
+```
 ### ✔️ **Deques (Double-ended Queues)**  
- Permitem inserção e remoção de elementos em ambas as extremidades.  
+Uma deque, também é conhecida como fila de duas extremidades, é uma coleção ordenada de itens semelhantes à fila. Tem duas extremidades, uma é o início (front) e uma é o fim (rear), e os itens permanecem posicionados na coleção. O que faz um deque diferente é a natureza não-restritiva de adicionar e remover itens. Novos itens podem ser adicionados no início ou no fim. Da mesma forma, itens existentes podem ser removidos de qualquer uma das extremidades,embora a deque possa assumir muitas das características de pilhas e filas, não requer a oredanação LIFO nem a FIFO que são impostas para essas estruturas de dados.
+ 
  **Exemplo de uso:** Agendamento de tarefas, algoritmos de backtracking.  
+``` python
+from collections import deque
+
+# Criando um deque
+deque_exemplo = deque()
+
+# Adicionando elementos
+deque_exemplo.append(10)      # Adiciona no final
+deque_exemplo.append(20)
+deque_exemplo.appendleft(5)   # Adiciona no início
+
+# Removendo elementos
+deque_exemplo.pop()           # Remove do final
+deque_exemplo.popleft()       # Remove do início
+
+# Acessando o primeiro e último elemento
+primeiro = deque_exemplo[0]  
+ultimo = deque_exemplo[-1]  
+
+# Exibindo o deque final
+print("Deque final:", deque_exemplo)
+``` 
+Para saber mais sobre algoritmos de backtracking desça até as referencias https://www.engwhere.com.br/utilitarios-agenda-calendario-apontamentos-e-tarefas/
 
 ### ✔️ **Listas**  
- Estruturas flexíveis que permitem inserção e remoção de elementos em qualquer posição.  
- **Exemplo de uso:** Representação de menus, armazenamento dinâmico de dados.  
+Uma lista é uma coleção de itens em que cada item tem uma posição relativa em relação aos outros. Mais especificamente, nos referiremos este tipo de lista como uma lista desordenada. Podemos considerar que a lista possui um primeiro item, um segundo item, um terceiro item e assim por diante. Nós também podemos no referirmos ao início da lista (o primeiro item) ou ao final da lista (o último item). Por simplicidade, vamos supor que as listas não podem conter itens duplicados.
+ **Exemplo de uso:**Lista de números  
+``` python
+# Criando uma lista de números
+numeros = [10, 20, 30, 40, 50]
 
+# Adicionando elementos
+numeros.append(60)  # Adiciona no final
+numeros.insert(2, 25)  # Adiciona na posição 2
+
+# Removendo elementos
+numeros.remove(40)  # Remove o valor 40
+ultimo = numeros.pop()  # Remove o último elemento
+
+# Acessando elementos
+primeiro = numeros[0]  # Primeiro elemento
+ultimo = numeros[-1]  # Último elemento
+
+# Percorrendo a lista
+for num in numeros:
+    print(num)
+
+# Saída da lista após as operações
+print("Lista final:", numeros)
+```
 ---
 
 📌 **Uso comum:** Implementação de listas de tarefas, sistemas de atendimento (ex: filas de banco).  
@@ -58,8 +130,16 @@ Começaremos nosso estudo de estruturas de dados considerando quatro estruturas 
 Os elementos **não seguem uma sequência fixa** e podem ter múltiplas conexões.  
 
 🔵 **Exemplos:**  
-- **Árvores (Trees):** `class No: def __init__(self, valor): self.valor = valor; self.esquerda = None`  
-- **Grafos (Graphs):** `grafo = {"A": ["B", "C"], "B": ["D"]}`  
+
+### ✔️ **Árvores (Trees)**
+Uma árvore é uma estrutura de dados recursiva que permite representar dados dispostos de maneira hierárquica, é composta por um conjunto de nós, existe um nó raiz que contém zero ou mais sub-árvores, cujas raízes(nós internos) estão ligadas diretamente à raiz, Os nós que não têm filhos são chamados de folhas (nós externos).
+
+<img src="https://www.alura.com.br/artigos/assets/estruturas-de-dados-introducao/imagem4.png" width="50%" alt="Texto Alternativo">
+
+
+### ✔️ **Grafos (Graphs):** 
+
+
 - **Tabelas Hash (Hash Tables):** `tabela = {"nome": "Ana", "idade": 25}`  
 
 📌 **Uso comum:** Sistemas de recomendação, algoritmos de busca, redes sociais.  
