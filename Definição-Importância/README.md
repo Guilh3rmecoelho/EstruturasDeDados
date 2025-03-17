@@ -218,5 +218,15 @@ if __name__ == "__main__":
             print("Opção inválida. Tente novamente.")
 
 ```
+---
+
+ ### Referencias
+ Link | Tipo | Descrição | Autor 
+------|--------|--------------| ------------|
+https://panda.ime.usp.br/panda/static/pythonds_pt/03-EDBasicos/02-EstruturasLineares.html|Livro|Resolução de Problemas Usando Python|Brad Miller e David Ranum
+https://www.alura.com.br/artigos/estruturas-de-dados-introducao|Artigo|Estruturas de dados: uma introdução| Juliana Amoasei
+https://www.cin.ufpe.br/~aams/metodos_computacionais/aulaArvores.pdf|Artigo|Métodos Computacionais|UFPE: Universidade Federal de Pernambuco
+https://www.dcc.fc.up.pt/~fds/aulas/EDados/2425/apontamentos/7_arvores_1a31.pdf|Artigo|Árvores Binárias|Fernando Silva
+https://medium.com/@sschonss/tabelas-hash-1f1a85a83795|Blog|Tabelas Hash|Luiz Schons
 
 
