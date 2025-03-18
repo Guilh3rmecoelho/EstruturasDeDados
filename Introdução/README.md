@@ -1,12 +1,5 @@
 # 📌 Estruturas de Dados em Python  
 
-📚 **Repositório para estudos acadêmicos sobre Listas Encadeadas, Listas Ordenadas e Árvores Binárias em Python.**  
-
-## 🚀 Sobre o Repositório  
-Este repositório foi criado para ajudar estudantes e desenvolvedores a **compreender e dominar estruturas de dados em Python**. Aqui, você encontrará conteúdos explicativos, exemplos práticos e implementações das principais estruturas de dados utilizadas na ciência da computação.  
-
-
----
 ## O que é estrutura de dados ?
 As **estruturas de dados** são uma forma de organizar e armazenar dados para que eles possam ser acessados e trabalhados com eficiência. Eles definem a relação entre os dados e as operações que podem ser realizadas nos dados. Existem vários tipos de estruturas de dados definidas que facilitam aos cientistas de dados e engenheiros da computação se concentrarem no quadro principal da solução de problemas maiores, em vez de se perderem nos detalhes da descrição e do acesso aos dados. Além disso as estruturas de dados são os blocos de construção fundamentais da programação de computadores. Eles definem como os dados são organizados, armazenados e manipulados dentro de um programa. Compreender as estruturas de dados é muito importante para o desenvolvimento de algoritmos eficientes e eficazes. 
 <!-- Explicando o que é estrutura de dados 1. Introdução às Estruturas de Dados- 1 -->
