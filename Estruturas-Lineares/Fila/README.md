@@ -2,7 +2,7 @@
 
 Uma **fila** (queue) é uma estrutura de dados linear que segue o princípio **FIFO** (First In, First Out), ou seja, o primeiro elemento inserido é o primeiro a ser removido.
 
-## 🔹 Operações Principais:
+## 🔵 Operações Principais:
 - **Enfileirar (enqueue)**: Adiciona um elemento ao final da fila.
 - **Desenfileirar (dequeue)**: Remove o primeiro elemento da fila.
 - **Acesso ao primeiro elemento**: (`frente_da_fila`).
@@ -24,3 +24,4 @@ primeiro = fila.popleft()
 
 # Exibindo a fila
 print("Fila após remoção:", list(fila))
+```
