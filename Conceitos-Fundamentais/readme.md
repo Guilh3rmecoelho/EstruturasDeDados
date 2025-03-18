@@ -49,9 +49,7 @@ Estática!|A memória é alocada no momento da compilação e tem tamanho fixo.|
 Dinâmica|A memória é alocada durante a execução do programa, permitindo flexibilidade.|Uso de listas em Python. 
 
 
-🔵 Estática
 
-A alocação estática ocorre com variáveis globais (alocadas fora de funções) ou quando variáveis locais (internas a uma função) são alocadas usando o modificador ''static''. Uma variável alocada estaticamente mantém seu valor durante toda a vida do programa, exceto quando explicitamente modificada.
 ``` C
 #include <stdio.h>
 
