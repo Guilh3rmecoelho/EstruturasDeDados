@@ -9,13 +9,46 @@ As **estruturas de dados** desempenham um papel crucial no desenvolvimento de so
 ###  **O que são estruturas Lineares**  
 Começaremos nosso estudo de estruturas de dados considerando quatro estruturas simples, mas muito uteis. Pilhas, filas, deques e listas são exemplos de coleções de dados cujos itens são ordenados de acordo com ordem que são inseridos ou removidos da estrutura. Uma vez que um item é inserido, fica em uma mesma posição em relação aos demais itens que foram inseridos antes ou que serão inseridos depois.Estruturas lineares podem ser consideradas como tendo duas extremidades,de frente e traseira por exemplo.O que distingue uma estrutura linear de outra é a maneira em que itens são inseridos e removidos, em particular a extremidade onde estes inserções e remoções ocorrem. Por exemplo, uma estrutura pode permitir que novos itens sejam inseridos em apenas uma das extremidades (pilhas e filas). Algumas estruturas podem permitir que itens sejam removidos de ambas as extremidades
 
+## 🔵 **Principais Fatores que Afetam o Desempenho**
+
+### 1️⃣ Complexidade de Tempo (Big-O Notation)
+
+A eficiência de uma estrutura de dados é geralmente medida usando a notação Big-O, que descreve como o tempo de execução cresce com o tamanho dos dados.
+Estrutura de Dados | Inserção |	Remoção | Busca
+------|--------|--------------|------|
+Lista Simples (Array)|O(1) no final, O(n) no início|O(n)|O(n)
+Fila (Queue)|O(1)|O(1)|O(n)
+Pilha (Stack)|O(1)|O(1)|O(n)
+Lista Encadeada|O(1)| O(1) (se no início)|O(n)
+Dicionário (Hash Table)|O(1)|O(1)|O(1)
+Árvore de Busca Binária (BST)|O(log n)|O(log n)|O(log n)
+
+ Uma estrutura como uma hash table é muito eficiente para buscas rápidas (O(1)), enquanto uma lista encadeada é útil quando precisamos de inserção e remoção frequentes sem realocação.
+
+### 2️⃣ Consumo de Memória
+
+Cada estrutura de dados consome memória de maneira diferente:
+
+  Listas e Arrays armazenam elementos de forma contígua na memória, o que pode exigir realocações.
+  Filas e Pilhas podem ser implementadas com arrays ou listas encadeadas, impactando o uso de memória.
+  Dicionários (Hash Tables) usam mais espaço para armazenar índices (hashes), mas oferecem buscas rápidas.
+  Árvores equilibradas (como AVL ou Red-Black) exigem mais memória devido aos ponteiros adicionais, mas garantem eficiência na busca.
+
+ ### 3️⃣ Casos de Uso e Escolha Certa
+  Link | Tipo | Descrição 
+------|--------|--------------|
+Precisa armazenar e acessar elementos rapidamente pelo índice?|Array/Listas
+Precisa processar dados em ordem FIFO?|Fila (Queue)
+Precisa processar dados em ordem LIFO?|Pilha (Stack)
+Precisa de buscas rápidas e flexíveis?|Dicionário (Hash Table)
+Precisa de busca ordenada e eficiente?|Árvore de Busca Binária (BST)
 
 ## 🟢 **Principais Estruturas Lineares**  
 
 ### ✔️ **Pilhas (Stacks)**  
  Uma pilha (stack) é uma coleção ordenada de itens onde a inserção de novos itens e a remoção de itens existentes sempre ocorrem na mesma extremidade. Este extremidade é comumente chamada de topo. A extremidade oposta ao topo é conhecida como base, seguem o princípio **LIFO** (*Last In, First Out*), onde o último elemento inserido é o primeiro a ser removido.  
 
-**Exemplo de uso:**  **Exemplo de uso:** Histórico de navegação em navegadores
+
 ```python
 # Criando uma pilha (usando lista)
 pilha = []
@@ -40,7 +73,7 @@ print("Pilha final:", pilha)
 ### ✔️ **Filas (Queues)**  
  Uma fila (queue) é uma coleção ordenada de itens em que a inserção de novos itens acontece em uma extremidade, chamado de “fim” (rear), e a remoção de itens existente ocorre no outro extremo, comumente chamado de “início” (front). Um elemento é inserido no fim da fila e faz o seu caminho em direção ao início, esperando até aquele momento em que é o próximo elemento seja removido. O item inserido mais recentemente na fila deve aguardar no final do coleção. O item que está na coleção há mais tempo está mais próximo do início. Este princípio de ordenação é às vezes chamado de FIFO, primeiro a entrar, primeiro a sair (first-in first-out). Também é conhecido como “primeiro a chegar, primeiro a ser servido” (first-come first-serverd).
 
- **Exemplo de uso:** **Exemplo de uso:** Sistemas de atendimento (suporte técnico, filas de impressão).
+
 ``` python
 from collections import deque
 
@@ -69,7 +102,6 @@ print("Fila final:", fila)
 ### ✔️ **Deques (Double-ended Queues)**  
 Uma deque, também é conhecida como fila de duas extremidades, é uma coleção ordenada de itens semelhantes à fila. Tem duas extremidades, uma é o início (front) e uma é o fim (rear), e os itens permanecem posicionados na coleção. O que faz um deque diferente é a natureza não-restritiva de adicionar e remover itens. Novos itens podem ser adicionados no início ou no fim. Da mesma forma, itens existentes podem ser removidos de qualquer uma das extremidades,embora a deque possa assumir muitas das características de pilhas e filas, não requer a oredanação LIFO nem a FIFO que são impostas para essas estruturas de dados.
  
- **Exemplo de uso:** Agendamento de tarefas, algoritmos de backtracking.  
 ``` python
 from collections import deque
 
@@ -96,7 +128,7 @@ Para saber mais sobre algoritmos de backtracking desça até as referencias http
 
 ### ✔️ **Listas**  
 Uma lista é uma coleção de itens em que cada item tem uma posição relativa em relação aos outros. Mais especificamente, nos referiremos este tipo de lista como uma lista desordenada. Podemos considerar que a lista possui um primeiro item, um segundo item, um terceiro item e assim por diante. Nós também podemos no referirmos ao início da lista (o primeiro item) ou ao final da lista (o último item). Por simplicidade, vamos supor que as listas não podem conter itens duplicados.
- **Exemplo de uso:**Lista de números  
+
 ``` python
 # Criando uma lista de números
 numeros = [10, 20, 30, 40, 50]
@@ -228,5 +260,10 @@ https://www.alura.com.br/artigos/estruturas-de-dados-introducao|Artigo|Estrutura
 https://www.cin.ufpe.br/~aams/metodos_computacionais/aulaArvores.pdf|Artigo|Métodos Computacionais|UFPE: Universidade Federal de Pernambuco
 https://www.dcc.fc.up.pt/~fds/aulas/EDados/2425/apontamentos/7_arvores_1a31.pdf|Artigo|Árvores Binárias|Fernando Silva
 https://medium.com/@sschonss/tabelas-hash-1f1a85a83795|Blog|Tabelas Hash|Luiz Schons
+
+1️⃣ Cormen, T. H., Leiserson, C. E., Rivest, R. L., & Stein, C. – Introduction to Algorithms (3rd Edition). The MIT Press, 2009.
+2️⃣ Goodrich, M. T., & Tamassia, R. – Data Structures and Algorithms in Python. Wiley, 2013.
+3️⃣ Sedgewick, R., & Wayne, K. – Algorithms (4th Edition). Addison-Wesley, 2011.
+
 
 
