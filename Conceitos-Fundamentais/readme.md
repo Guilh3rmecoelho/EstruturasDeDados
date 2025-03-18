@@ -3,10 +3,23 @@
 🔹 Variáveis
 
 Variáveis são espaços na memória que armazenam valores que podem ser manipulados pelo programa. Elas permitem que os dados sejam armazenados e acessados de maneira eficiente durante a execução do programa.
+```pyhton
+# Declarando variáveis
+idade = 25  # Inteiro
+altura = 1.75  # Flutuante
+nome = "Carlos"  # String
+estudante = True  # Booleano
+
+# Exibindo os valores armazenados
+print("Nome:", nome)
+print("Idade:", idade, "anos")
+print("Altura:", altura, "m")
+print("É estudante?", estudante)
+```
 
 🔹 Tipos de Dados
 
-Os tipos de dados definem o tipo de valor que pode ser armazenado em uma variável. Alguns exemplos comuns incluem:
+Como foi citado na introdução os tipos de dados definem o tipo de valor que pode ser armazenado em uma variável. Alguns exemplos comuns incluem:
 
 📌 Inteiros (int): Números inteiros, como 10, -5, 42.
 
